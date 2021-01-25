@@ -1,0 +1,658 @@
+[
+  {
+    "SquaresCoordinates": {
+      "X": 0,
+      "Y": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 1,
+      "Y": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 2,
+      "Y": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 3,
+      "Y": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 4,
+      "Y": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 5,
+      "Y": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 6,
+      "Y": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 7,
+      "Y": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 0,
+      "Y": 1
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 1
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 1,
+      "Y": 1
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 1
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 2,
+      "Y": 1
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 1
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 3,
+      "Y": 1
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 1
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 4,
+      "Y": 1
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 1
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 5,
+      "Y": 1
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 1
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 6,
+      "Y": 1
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 1
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 7,
+      "Y": 1
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 1
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 0,
+      "Y": 2
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 1,
+      "Y": 2
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 2,
+      "Y": 2
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 3,
+      "Y": 2
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 4,
+      "Y": 2
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 5,
+      "Y": 2
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 6,
+      "Y": 2
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 7,
+      "Y": 2
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 0,
+      "Y": 3
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 1,
+      "Y": 3
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 2,
+      "Y": 3
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 3,
+      "Y": 3
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 4,
+      "Y": 3
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 5,
+      "Y": 3
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 6,
+      "Y": 3
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 7,
+      "Y": 3
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 0,
+      "Y": 4
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 1,
+      "Y": 4
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 2,
+      "Y": 4
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 3,
+      "Y": 4
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 4,
+      "Y": 4
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 5,
+      "Y": 4
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 6,
+      "Y": 4
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 7,
+      "Y": 4
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 0,
+      "Y": 5
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 1,
+      "Y": 5
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 2,
+      "Y": 5
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 3,
+      "Y": 5
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 4,
+      "Y": 5
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 5,
+      "Y": 5
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 6,
+      "Y": 5
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 7,
+      "Y": 5
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 0,
+      "Y": 6
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 1,
+      "Y": 6
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 2,
+      "Y": 6
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 3,
+      "Y": 6
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 4,
+      "Y": 6
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 5,
+      "Y": 6
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 6,
+      "Y": 6
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 7,
+      "Y": 6
+    },
+    "Piece": {
+      "$type": "SolarWinds.MSP.Chess.Piece.Pawn, SolarWinds.MSP.Chess.Core",
+      "PieceSettings": [
+        {
+          "Move": 0,
+          "CanTake": false,
+          "CanMoveMultipleSpaces": false
+        },
+        {
+          "Move": 2,
+          "CanTake": true,
+          "CanMoveMultipleSpaces": false
+        }
+      ],
+      "PieceName": 0,
+      "PieceColor": 0
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 0,
+      "Y": 7
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 1,
+      "Y": 7
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 2,
+      "Y": 7
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 3,
+      "Y": 7
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 4,
+      "Y": 7
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 5,
+      "Y": 7
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 6,
+      "Y": 7
+    }
+  },
+  {
+    "SquaresCoordinates": {
+      "X": 7,
+      "Y": 7
+    }
+  }
+]

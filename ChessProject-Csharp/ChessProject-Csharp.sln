@@ -1,8 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{71E28B51-7515-4CD2-BBDE-7322E00B6E02}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tests", "tests\tests.csproj", "{71E28B51-7515-4CD2-BBDE-7322E00B6E02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src", "src\src.csproj", "{557B8737-EA4A-48BB-A7B9-3E0F7AD6A7C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolarWinds.MSP.Chess.Core", "src\SolarWinds.MSP.Chess.Core.csproj", "{557B8737-EA4A-48BB-A7B9-3E0F7AD6A7C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +21,11 @@ Global
 		{557B8737-EA4A-48BB-A7B9-3E0F7AD6A7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{557B8737-EA4A-48BB-A7B9-3E0F7AD6A7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{557B8737-EA4A-48BB-A7B9-3E0F7AD6A7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CE234BE-5273-4B7C-BA21-604D4D9DABE1}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AssemblyName>SolarWinds.MSP.Chess.Core</AssemblyName>
+        <RootNamespace>SolarWinds.MSP.Chess.Core</RootNamespace>
+        <Version>2.0.0</Version>
+        <SignAssembly>false</SignAssembly>
+        <AssemblyOriginatorKeyFile>KeyFile.snk</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="BoardJSONConfigurations\ClassicBoardConfiguration.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="BoardJSONConfigurations\ClassicBoardConfiguration.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+      <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Helpers\FileReadHelper.cs">
+        <ExcludeFromSourceAnalysis>False</ExcludeFromSourceAnalysis>
+        <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+      </Compile>
+      <Compile Update="Properties\Resources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Properties\ChessResource.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ChessResource.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Properties\Resources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Properties\ChessResource.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>ChessResource.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Resources\" />
+    </ItemGroup>
+
+</Project>

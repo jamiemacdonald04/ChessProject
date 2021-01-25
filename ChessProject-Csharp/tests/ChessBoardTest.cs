@@ -1,111 +1,96 @@
-﻿using NUnit.Framework;
-
-namespace SolarWinds.MSP.Chess
+﻿namespace SolarWinds.MSP.Chess
 {
+	using NUnit.Framework;
+	using SolarWinds.MSP.Chess.Piece;
+	using SolarWinds.MSP.Chess.Interface;
+    using SolarWinds.MSP.Chess.Models;
+    using System.Collections.Generic;
+	using System.Linq;
+    using SolarWinds.MSP.Chess.Core.Helpers;
+    using SolarWinds.MSP.Chess.Core.Interface;
+
     [TestFixture]
 	public class ChessBoardTest
 	{
-		private ChessBoard chessBoard;
+		private ChessBoardSingleton chessBoard;
+		private IChessBoardHelper chessBoardHelper;
+		private List<BoardSquare> chessBoardGameSquares;
+		private IGameMoves chessMoves;
 
-        [SetUp]
+		[SetUp]
 		public void SetUp()
 		{
-			chessBoard = new ChessBoard();
-		}
+			this.chessBoardHelper = new ChessBoardHelper();
+			this.chessBoard =  ChessBoardSingleton.Instance;
+			this.chessBoardGameSquares = chessBoard.ChessBoardGameSquares;
+			this.chessMoves = new ChessMoves();
+	}
 
         [Test]
 		public void Has_MaxBoardWidth_of_7()
 		{
-			Assert.AreEqual(ChessBoard.MaxBoardWidth, 7);
+			////Arrange
+			IEnumerable<BoardSquare> chessBoardGameSquares = this.chessBoardGameSquares.Where(square => square.SquaresCoordinates.Y == 1);
+
+			////Act
+			int chessBoardSquares = chessBoardGameSquares.Count();
+			int lastCoordinate = chessBoardGameSquares.LastOrDefault().SquaresCoordinates.X;
+			int FirstCoordinate = chessBoardGameSquares.FirstOrDefault().SquaresCoordinates.X;
+
+			//// Assert
+			Assert.AreEqual(chessBoardSquares, 8);
+			Assert.AreEqual(lastCoordinate, 7);
+			Assert.AreEqual(FirstCoordinate, 0);
 		}
 
-        [Test]
-		public void Has_MaxBoardHeight_of_7()
+		[Test]
+		public void Has_MaxBoardHeight_of_8()
 		{
-			Assert.AreEqual(ChessBoard.MaxBoardHeight, 7);
-		}
+			////Arrange
+			IEnumerable<BoardSquare> chessBoardGameSquares = this.chessBoardGameSquares.Where(square => square.SquaresCoordinates.X == 1);
 
-        [Test]
-		public void IsLegalBoardPosition_True_X_equals_0_Y_equals_0()
-		{
-			var isValidPosition = chessBoard.IsLegalBoardPosition(0, 0);
-			Assert.IsTrue(isValidPosition);
-		}
+			////Act
+			int chessBoardSquares = chessBoardGameSquares.Count();
+			int lastCoordinate = chessBoardGameSquares.LastOrDefault().SquaresCoordinates.Y;
+			int FirstCoordinate = chessBoardGameSquares.FirstOrDefault().SquaresCoordinates.Y;
 
-        [Test]
-		public void IsLegalBoardPosition_True_X_equals_5_Y_equals_5()
-		{
-			var isValidPosition = chessBoard.IsLegalBoardPosition(5, 5);
-            Assert.IsTrue(isValidPosition);
-		}
-
-        [Test]
-		public void IsLegalBoardPosition_False_X_equals_11_Y_equals_5()
-		{
-			var isValidPosition = chessBoard.IsLegalBoardPosition(11, 5);
-            Assert.IsFalse(isValidPosition);
-		}
-
-        [Test]
-		public void IsLegalBoardPosition_False_X_equals_0_Y_equals_9()
-		{
-			var isValidPosition = chessBoard.IsLegalBoardPosition(0, 9);
-            Assert.IsFalse(isValidPosition);
-		}
-
-        [Test]
-		public void IsLegalBoardPosition_False_X_equals_11_Y_equals_0()
-		{
-			var isValidPosition = chessBoard.IsLegalBoardPosition(11, 0);
-            Assert.IsFalse(isValidPosition);
-		}
-
-        [Test]
-		public void IsLegalBoardPosition_False_For_Negative_X_Values()
-		{
-			var isValidPosition = chessBoard.IsLegalBoardPosition(-1, 5);
-            Assert.IsFalse(isValidPosition);
-		}
-
-        [Test]
-		public void IsLegalBoardPosition_False_For_Negative_Y_Values()
-		{
-			var isValidPosition = chessBoard.IsLegalBoardPosition(5, -1);
-            Assert.IsFalse(isValidPosition);
+			//// Assert
+			Assert.AreEqual(chessBoardSquares, 8);
+			Assert.AreEqual(lastCoordinate, 7);
+			Assert.AreEqual(FirstCoordinate, 0);
 		}
 
         [Test]
 		public void Avoids_Duplicate_Positioning()
 		{
-			Pawn firstPawn = new Pawn(PieceColor.Black);
-			Pawn secondPawn = new Pawn(PieceColor.Black);
-			chessBoard.Add(firstPawn, 6, 3, PieceColor.Black);
-			chessBoard.Add(secondPawn, 6, 3, PieceColor.Black);
-			Assert.AreEqual(firstPawn.XCoordinate, 6);
-            Assert.AreEqual(firstPawn.YCoordinate, 3);
-            Assert.AreEqual(secondPawn.XCoordinate, -1);
-            Assert.AreEqual(secondPawn.YCoordinate, -1);
-		}
+			int x = 0;
+			int y = 6;
 
-        [Test]
-		public void Limits_The_Number_Of_Pawns()
-		{
-			for (int i = 0; i < 10; i++)
+			BoardSquare currentSquare = chessBoardHelper.GetSquare(this.chessBoardGameSquares, new Coordinate(x, y));
+
+			for (int yIndex = 0; yIndex <= 4; yIndex++)
 			{
-				Pawn pawn = new Pawn(PieceColor.Black);
-				int row = i / ChessBoard.MaxBoardWidth;
-				chessBoard.Add(pawn, 6 + row, i % ChessBoard.MaxBoardWidth, PieceColor.Black);
-				if (row < 1)
+				y -= 1;
+				chessMoves.MovePieceOnBoard(currentSquare.Piece, new Coordinate(x, y), this.chessBoardGameSquares);
+				currentSquare = chessBoardHelper.GetSquare(this.chessBoardGameSquares, new Coordinate(x, y));
+
+				if (yIndex == 4)
 				{
-					Assert.AreEqual(pawn.XCoordinate, (6 + row));
-					Assert.AreEqual(pawn.YCoordinate, (i % ChessBoard.MaxBoardWidth));
-				}
-				else
-				{
-					Assert.AreEqual(pawn.XCoordinate, -1);
-                    Assert.AreEqual(pawn.YCoordinate, -1);
+					BoardSquare StillOnThisSquare = chessBoardHelper.GetSquare(this.chessBoardGameSquares, new Coordinate(x, y + 1));
+					Assert.IsTrue(StillOnThisSquare.Piece.PieceColour == PieceColourEnum.Black);
+					Assert.IsTrue(currentSquare.Piece.PieceColour == PieceColourEnum.White); 
 				}
 			}
 		}
-	}
+
+          [Test]
+        public void Correct_Number_Of_Pawns()
+        {
+			IEnumerable<IPieceStrategy> pawns = this.chessBoardGameSquares.Where(square => square.Piece is Pawn).Select(square => square.Piece );
+			int whitePawns = pawns.Where(piece => piece.PieceColour == PieceColourEnum.White).Count();
+			int blackPawns = pawns.Where(piece => piece.PieceColour == PieceColourEnum.White).Count();
+			Assert.AreEqual(whitePawns, 8);
+			Assert.AreEqual(blackPawns, 8);
+		}
+    }
 }
