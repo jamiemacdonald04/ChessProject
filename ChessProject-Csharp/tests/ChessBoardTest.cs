@@ -88,7 +88,7 @@
         {
 			IEnumerable<IPieceStrategy> pawns = this.chessBoardGameSquares.Where(square => square.Piece is Pawn).Select(square => square.Piece );
 			int whitePawns = pawns.Where(piece => piece.PieceColour == PieceColourEnum.White).Count();
-			int blackPawns = pawns.Where(piece => piece.PieceColour == PieceColourEnum.White).Count();
+			int blackPawns = pawns.Where(piece => piece.PieceColour == PieceColourEnum.Black).Count();
 			Assert.AreEqual(whitePawns, 8);
 			Assert.AreEqual(blackPawns, 8);
 		}
